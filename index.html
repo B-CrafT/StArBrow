@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8"> <!-- Установка кодировки -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> <!-- Адаптивный дизайн -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- Совместимость с IE -->
+    <meta name="description" content="Студия архитектуры бровей. Индивидуальные услуги по перманентному макияжу, ламинированию ресниц и бровей."> <!-- Описание сайта -->
+    <meta name="keywords" content="перманентный макияж, ламинирование ресниц, студия красоты, брови, макияж, эстетика, MargoBeauty"> <!-- Ключевые слова -->
+    <meta name="author" content="Вячеслав Кузнецов"> <!-- Автор сайта -->
+    <meta property="og:title" content="Студия архитектуры бровей"> <!-- Заголовок для соцсетей -->
+    <meta property="og:description" content="Индивидуальные услуги по перманентному макияжу и ламинированию ресниц и бровей."> <!-- Описание для соцсетей -->
+    <meta property="og:image" content="path/to/image.jpg"> <!-- Изображение для соцсетей -->
+    <title>Студия архитектуры бровей</title> <!-- Заголовок страницы -->
+    
+    <!-- Подключение стилей для AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"> <!-- AOS стили -->
+
+    <!-- Подключение Font Awesome для иконок соцсетей -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome стили -->
+
+    <!-- Подключение внешнего CSS файла для стилей -->
+    <link rel="stylesheet" href="styles.css"> <!-- Основные стили -->
+</head>
+
+<body>
+    <!-- Шапка сайта -->
+    <header id="header" data-aos="fade-down"> <!-- Анимация шапки -->
+        <div class="container">
+            <h1>Студия архитектуры бровей</h1> <!-- Название студии -->
+            <nav>
+                <ul>
+                    <li><a href="#about">Обо мне</a></li> <!-- Ссылка на раздел "Обо мне" -->
+                    <li><a href="#services">Услуги и цены</a></li> <!-- Ссылка на раздел "Услуги" -->
+                    <li><a href="#appointment">Записаться</a></li> <!-- Ссылка на раздел "Записаться" -->
+                    <li><a href="#reviews">Отзывы</a></li><!-- Ссылка на раздел "Отзывы" -->
+                    <li><a href="#appointment">Контакты</a></li><!-- Ссылка на раздел "Кнопки соцсетей" -->
+                
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Раздел "Обо мне" с кратким описанием студии -->
+    <section id="about" data-aos="fade-up"> <!-- Анимация раздела -->
+        <div class="container">
+            <h2>Маргарита Кузнецова</h2> <!-- Имя мастера -->
+            <h4>Мастер перманентного макияжа</h4> <!-- Должность мастера -->
+            <p>Меня зовут Маргарита. Я специализируюсь в области бьюти-индустрии уже несколько лет. Множество довольных клиентов увидели себя с другой стороны. Записывайтесь на сайте или пишите в директ, там же можно посмотреть мои работы.</p>
+        </div>
+        <div class="about__box">
+            <img class="about__box-img" src="about_image\11.png" alt="Перманентный макияж"> <!-- Изображение -->
+        </div>
+    </section>
+
+    <!-- Раздел с услугами студии -->
+    <section id="services" data-aos="fade-up"> <!-- Анимация раздела -->
+        <div class="container">
+            <h2>Услуги и цены</h2> <!-- Заголовок раздела -->
+            <!-- Подраздел "Перманентный макияж" -->
+            <div class="service-subsection">
+                <h3>Перманент бровей</h3> <!-- Заголовок подраздела -->
+                <div class="price-list">
+                    <div class="price-item" data-aos="fade-up"> <!-- Анимация элемента -->
+                        <div class="price-header">
+                            <h4>Перманентный макияж бровей</h4> <!-- Название услуги -->
+                            <span class="price">9000 RUB</span> <!-- Цена услуги -->
+                        </div>
+                        <div class="price-description">
+                            <p>Идеальная форма бровей, естественный вид и долговечность на долгое время.</p> <!-- Описание услуги -->
+                        </div>
+                    </div>
+                    <div class="price-item" data-aos="fade-up"> <!-- Анимация элемента -->
+                        <div class="price-header">
+                            <h4>Коррекция перманента бровей</h4> <!-- Название услуги -->
+                            <span class="price">4500 RUB</span> <!-- Цена услуги -->
+                        </div>
+                        <div class="price-description">
+                            <p>Профессиональная коррекция для подчеркивания ваших черт лица и гармонии взгляда.</p> <!-- Описание услуги -->
+                        </div>
+                    </div>
+                    <div class="price-item" data-aos="fade-up"> <!-- Анимация элемента -->
+                        <div class="price-header">
+                            <h4>Рефреш (коррекция перманента)</h4> <!-- Название услуги -->
+                            <span class="price">9000 RUB</span> <!-- Цена услуги -->
+                        </div>
+                        <div class="price-description">
+                            <p>Профессиональная коррекция для подчеркивания ваших черт лица и гармонии взгляда.</p> <!-- Описание услуги -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Подраздел "Ламинирование" -->
+            <div class="service-subsection lamination">
+                <h3>Ламинирование ресниц</h3> <!-- Заголовок подраздела -->
+                <div class="price-list">
+                    <div class="price-item" data-aos="fade-up"> <!-- Анимация элемента -->
+                        <div class="price-header">
+                            <h4>Ламинирование + окрашивание</h4> <!-- Название услуги -->
+                            <span class="price">2000 RUB</span> <!-- Цена услуги -->
+                        </div>
+                        <div class="price-description">
+                            <p>Ламинирование ресниц придает им естественную густоту и изгиб, подчеркивая красоту взгляда.</p> <!-- Описание услуги -->
+                        </div>
+                    </div>
+                    <div class="price-item" data-aos="fade-up"> <!-- Анимация элемента -->
+                        <div class="price-header">
+                            <h4>Ламинирование + окрашивание + ботокс</h4> <!-- Название услуги -->
+                            <span class="price">2300 RUB</span> <!-- Цена услуги -->
+                        </div>
+                        <div class="price-description">
+                            <p></p> <!-- Описание услуги -->
+                        </div>
+                    </div>
+                    <div class="price-item" data-aos="fade-up"> <!-- Анимация элемента -->
+                        <div class="price-header">
+                            <h4>Ламинирование верхних и нижних ресниц</h4> <!-- Название услуги -->
+                            <span class="price">3000 RUB</span> <!-- Цена услуги -->
+                        </div>
+                        <div class="price-description">
+                            <p></p> <!-- Описание услуги -->
+                        </div>
+                    </div>
+                    <div class="price-item" data-aos="fade-up"> <!-- Анимация элемента -->
+                        <div class="price-header">
+                            <h4>Снятие нарощенных ресниц</h4> <!-- Название услуги -->
+                            <span class="price">500 RUB</span> <!-- Цена услуги -->
+                        </div>
+                        <div class="price-description">
+                            <p></p> <!-- Описание услуги -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <!-- Подраздел "Брови" -->
+    <div class="service-subsection brow">
+        <h3>Брови</h3> <!-- Заголовок подраздела -->
+        <div class="price-list">
+            <div class="price-item" data-aos="fade-up"> <!-- Анимация элемента -->
+                <div class="price-header">
+                    <h4>Оформление и окрашивание</h4> <!-- Название услуги -->
+                    <span class="price">1500 RUB</span> <!-- Цена услуги -->
+                </div>
+                <div class="price-description">
+                    <p></p> <!-- Описание услуги -->
+                </div>
+            </div>
+            <div class="price-item" data-aos="fade-up"> <!-- Анимация элемента -->
+                <div class="price-header">
+                    <h4>Оформление бровей</h4> <!-- Название услуги -->
+                    <span class="price">700 RUB</span> <!-- Цена услуги -->
+                </div>
+                <div class="price-description">
+                    <p></p> <!-- Описание услуги -->
+                </div>
+            </div>
+            <div class="price-item" data-aos="fade-up"> <!-- Анимация элемента -->
+                <div class="price-header">
+                    <h4>Долговременная укладка и оформление</h4> <!-- Название услуги -->
+                    <span class="price">1700 RUB</span> <!-- Цена услуги -->
+                </div>
+                <div class="price-description">
+                    <p></p> <!-- Описание услуги -->
+                </div>
+            </div>
+            <div class="price-item" data-aos="fade-up"> <!-- Анимация элемента -->
+                <div class="price-header">
+                    <h4>Долговременная укладка + оформление + окрашивание</h4> <!-- Название услуги -->
+                    <span class="price">2000 RUB</span> <!-- Цена услуги -->
+                </div>
+                <div class="price-description">
+                    <p></p> <!-- Описание услуги -->
+                </div>
+            </div>
+            <div class="price-item" data-aos="fade-up"> <!-- Анимация элемента -->
+                <div class="price-header">
+                    <h4>Процедура "Счастье для бровей"</h4> <!-- Название услуги -->
+                    <span class="price">700 RUB</span> <!-- Цена услуги -->
+                </div>
+                <div class="price-description">
+                    <p></p> <!-- Описание услуги -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="service-subsection lamination">
+    <h3>Комплекс</h3> <!-- Заголовок подраздела -->
+    <div class="price-list">
+        <div class="price-item" data-aos="fade-up"> <!-- Анимация элемента -->
+            <div class="price-header">
+                <h4>№1. Ламинирование ресниц + окрашивание бровей</h4> <!-- Название услуги -->
+                <span class="price">2700 RUB</span> <!-- Цена услуги -->
+            </div>
+            <div class="price-description">
+                <p></p> <!-- Описание услуги -->
+            </div>
+        </div>
+        <div class="price-item" data-aos="fade-up"> <!-- Анимация элемента -->
+            <div class="price-header">
+                <h4>№2. Ламинирование ресниц + окрашивание бровей</h4> <!-- Название услуги -->
+                <span class="price">3200 RUB</span> <!-- Цена услуги -->
+            </div>
+            <div class="price-description">
+                <p></p> <!-- Описание услуги -->
+            </div>
+        </div>
+        <div class="price-item" data-aos="fade-up"> <!-- Анимация элемента -->
+            <div class="price-header">
+                <h4>№3. Ламинирование ресниц + долговременная укладка + окрашивание бровей</h4> <!-- Название услуги -->
+                <span class="price">3700 RUB</span> <!-- Цена услуги -->
+            </div>
+            <div class="price-description">
+                <p></p> <!-- Описание услуги -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</section>
+
+    <!-- Раздел для записи на услуги -->
+    <section id="appointment" data-aos="fade-up"> <!-- Анимация раздела -->
+        <div class="container">
+            <h2>Записаться на услугу</h2> <!-- Заголовок раздела -->
+            <!-- Ссылка на Google Форму для записи -->
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeongesTkpnxrbH4uY63XGVothn41gy3xKIKH29RsW4Eu5vgw/viewform?usp=sharing" target="_blank" class="cta-button">Перейти к записи</a> <!-- Кнопка для записи -->
+        </div>
+    </section>
+
+    <!-- Раздел отзывов -->
+    <section id="reviews" data-aos="fade-up"> <!-- Анимация раздела -->
+        <div class="container">
+            <h2>Отзывы</h2> <!-- Заголовок раздела -->
+            <div class="reviews-wrapper">
+                <div class="review-card">
+                    <img src="reviews_image\otz1.jpg" alt="Отзыв 1"> <!-- Изображение отзыва -->
+                </div>
+                <div class="review-card">
+                    <img src="reviews_image\otz2.jpg" alt="Отзыв 2"> <!-- Изображение отзыва -->
+                </div>
+                <div class="review-card">
+                    <img src="reviews_image\otz3.jpg" alt="Отзыв 3"> <!-- Изображение отзыва -->
+                </div>
+                <div class="review-card">
+                    <img src="reviews_image\otz4.jpg" alt="Отзыв 4"> <!-- Изображение отзыва -->
+                </div>
+                <div class="review-card">
+                    <img src="reviews_image\otz5.jpg" alt="Отзыв 5"> <!-- Изображение отзыва -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер с информацией о правах и кнопками соцсетей -->
+    <footer data-aos="fade-up"> <!-- Анимация футера -->
+        <h2>Связаться со мной</h2> <!-- Заголовок футера -->
+        <div class="social-icons">
+            <a href="https://www.instagram.com/aaatiragram/" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i> <!-- Иконка Instagram -->
+            </a>
+            <a href="https://t.me/aaatiragram" target="_blank" class="social-icon">
+                <i class="fab fa-telegram"></i> <!-- Иконка Telegram -->
+            </a>
+            <a href="https://wa.me/your-phone-number" target="_blank" class="social-icon">
+                <i class="fab fa-whatsapp"></i> <!-- Иконка WhatsApp -->
+            </a>
+        </div>
+        <div class="container">
+            <p>&copy; Москва 2025 Студия архитектуры бровей. Все права защищены.</p> <!-- Права -->
+
+        </div>
+    </footer>
+
+    <!-- Кнопка "Наверх" -->
+    <button id="back-to-top" class="back-to-top">↑ Наверх</button> <!-- Кнопка для прокрутки наверх -->
+
+    <!-- Подключение JavaScript для AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script> <!-- AOS скрипт -->
+    <script>
+        AOS.init({
+            duration: 1000,  // Время анимации
+            once: false,      // Анимация выполняется только один раз
+        });
+    </script>
+
+    <!-- Подключение внешнего JavaScript файла -->
+    <script src="scripts.js"></script> <!-- Основной скрипт -->
+
+    <!-- Скрипт для плавной прокрутки -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetElement = document.querySelector(this.getAttribute('href'));
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Показать кнопку "Наверх" при прокрутке
+        window.addEventListener('scroll', () => {
+            const button = document.getElementById('back-to-top');
+            if (window.scrollY > 300) {
+                button.style.display = 'block';
+            } else {
+                button.style.display = 'none';
+            }
+        });
+
+        // Прокрутка наверх при клике
+        document.getElementById('back-to-top').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+
+</html>
