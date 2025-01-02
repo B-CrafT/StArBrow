@@ -26,8 +26,9 @@ body {
 }
 
 /* Стили для заголовков h1, h2, h3, h4 */
-h1, h2, h3, h4 { 
-    font-weight: 800; /* Жирный шрифт для заголовков */
+h1, h2, h3, #services h2, #social-icons h2 { 
+    font-family: 'Roboto', sans-serif; /* Устанавливаем шрифт */
+    font-weight: 700; /* Жирный шрифт для заголовков */
     text-align: center; /* Выравниваем заголовки по центру */
     margin-bottom: 20px; /* Отступ снизу */
 }
@@ -410,6 +411,9 @@ header nav ul li a:hover {
 @media (min-width: 1200px) {
     .services-wrapper { 
         grid-template-columns: repeat(4, 1fr); /* Четыре столбца */
+    }
+    #services h2 { 
+        font-size: 32px; /* Уменьшаем размер заголовка */
     }
 }
 
@@ -877,6 +881,6 @@ footer {
     }
 }
 
-/*Снежинки*/
+
 
 
