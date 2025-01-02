@@ -379,7 +379,7 @@ header nav ul li a:hover {
 
 @media (max-width: 767px) {
     #services h2 { 
-        font-size: 24px; /* Уменьшаем размер заголовка */
+        font-size: 32px; /* Уменьшаем размер заголовка */
     }
 
     .service-subsection h3 { 
@@ -472,7 +472,7 @@ footer {
 }
 
 #contact p { 
-    font-size: 18px; /* Размер шрифта для параграфов */
+    font-size: 32px; /* Размер шрифта для параграфов */
     color: #666; /* Цвет текста */
     margin-bottom: 10px; /* Отступ снизу */
 }
@@ -618,7 +618,7 @@ footer {
     }
 
     .hero__title { 
-        font-size: 28px; /* Размер шрифта заголовка */
+        font-size: 32px; /* Размер шрифта заголовка */
         margin-bottom: 10px; /* Отступ снизу */
     }
 
@@ -669,7 +669,7 @@ footer {
     }
 
     #about h2 { 
-        font-size: 24px; /* Уменьшаем размер заголовка */
+        font-size: 32px; /* Уменьшаем размер заголовка */
     }
 
     #about h4 { 

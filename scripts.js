@@ -19,7 +19,8 @@ document.getElementById('back-to-top').addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-document.querySelectorAll('.price-item').forEach(item => {
+document.querySelectorAll('.price-item').forEach((item, index) => {
+    item.setAttribute('data-aos-delay', index * 100); // Устанавливаем задержку анимации
     item.addEventListener('click', () => {
         item.classList.toggle('active');
     });
