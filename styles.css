@@ -27,7 +27,7 @@ body {
 
 /* Стили для заголовков h1, h2, h3, h4 */
 h1, h2, h3, h4 { 
-    font-weight: 700; /* Жирный шрифт для заголовков */
+    font-weight: 800; /* Жирный шрифт для заголовков */
     text-align: center; /* Выравниваем заголовки по центру */
     margin-bottom: 20px; /* Отступ снизу */
 }
@@ -37,6 +37,7 @@ header {
     background-color: #272425; /* Цвет фона */
     color: #fff; /* Белый текст */
     padding: 20px 0; /* Внутренние отступы сверху и снизу */
+    
 }
 
 /* Навигация в шапке */
@@ -62,8 +63,17 @@ header nav ul li a {
 header nav ul li a:hover { 
     color: #ec507f; /* Цвет текста при наведении */
 }
-      /* Навигация для мобильных устройств */
+
+/* Значок меню */
+.menu-icon {
+    display: none; /* Скрываем значок меню по умолчанию */
+    font-size: 24px; /* Размер значка */
+    cursor: pointer; /* Курсор в виде указателя */
+    color: #fff; /* Цвет значка */
+}
+
 @media (max-width: 767px) {
+
     header nav ul { 
         flex-direction: string; /* Вертикальное расположение элементов */
         align-items: center; /* Центрируем элементы */
@@ -78,6 +88,32 @@ header nav ul li a:hover {
     header nav ul li { 
         margin-bottom: 1px; /* Отступ снизу для элементов списка */
     }
+/* Значок меню */
+    .menu-icon {
+        display: block; /* Показываем значок меню на мобильных устройствах */
+        margin-left: auto; /* Автоматический отступ слева для перемещения вправо */
+        padding-right:20px; /* Добавляем отступ справа */
+        position: relative; /* Устанавливаем относительное позиционирование */
+        top: -50px; /* Поднимаем значок меню выше */
+    }
+/* Навигация */
+    nav ul {
+        display: none; /* Скрываем навигацию по умолчанию */
+        flex-direction: column; /* Вертикальное расположение элементов */
+        align-items: center; /* Центрируем элементы */
+        gap: 10px; /* Расстояние между элементами */
+    }
+
+    nav ul.show {
+        display: flex; /* Показываем навигацию при активном состоянии */
+    }
+    /* Контейнер для шапки */
+    .header-container {
+         display: flex; /* Используем флекс-контейнер */
+         justify-content: space-between; /* Распределяем элементы по бокам */
+         align-items: center; /* Вертикальное выравнивание по центру */
+         padding: 10px 20px; /* Внутренние отступы */
+        }
 }
 
 /* Стили для hero секции */
@@ -754,3 +790,93 @@ footer {
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Увеличиваем тень */
     }
 }
+
+/* Мобильная навигация */
+.mobile-nav {
+    display: none; /* Скрываем мобильную навигацию по умолчанию */
+    position: fixed; /* Фиксируем навигацию на экране */
+    top: 0; /* Расположение сверху */
+    left: 0; /* Расположение слева */
+    width: 100%; /* Ширина 100% */
+    height: 100%; /* Высота 100% */
+    background-color: rgba(0, 0, 0, 0.9); /* Полупрозрачный черный фон */
+    z-index: 1000; /* Поверх всех элементов */
+    justify-content: center; /* Центрируем содержимое */
+    align-items: center; /* Центрируем содержимое */
+    flex-direction: column; /* Вертикальное расположение элементов */
+}
+          /*Крестик */
+.mobile-nav .close-icon {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 20px; /* Отступ сверху */
+    right: 20px; /* Отступ справа */
+    font-size: 24px; /* Размер значка */
+    cursor: pointer; /* Курсор в виде указателя */
+    color: #fff; /* Цвет значка */
+}
+
+.mobile-nav ul {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+.mobile-nav ul li {
+    margin: 20px 0; /* Отступы между элементами */
+}
+
+.mobile-nav ul li a {
+    color: #fff; /* Белый цвет текста */
+    font-size: 24px; /* Размер шрифта */
+    text-decoration: none; /* Убираем подчеркивание */
+    text-transform: uppercase; /* Верхний регистр */
+}
+
+@media (max-width: 767px) {
+    .menu-icon {
+        display: block; /* Показываем значок меню на мобильных устройствах */
+    }
+
+    nav ul {
+        display: none; /* Скрываем навигацию по умолчанию */
+    }
+
+    .mobile-nav.show {
+        display: flex; /* Показываем мобильную навигацию при активном состоянии */
+    }
+}
+
+@media (max-width: 767px) {
+    .header-section:nth-child(2) {
+        display: none; /* Скрываем раздел навигации на мобильных устройствах */
+    }
+
+    .menu-icon {
+        display: block; /* Показываем значок меню на мобильных устройствах */
+    }
+
+    .mobile-nav.show {
+        display: flex; /* Показываем мобильную навигацию при активном состоянии */
+    }
+}
+
+/*Снежинки*/
+
+.snowflake {
+    position: fixed;
+    top: 0;
+    color: white;
+    user-select: none;
+    pointer-events: none;
+    z-index: 9999;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+/*Снежинки*/
+
+

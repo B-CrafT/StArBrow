@@ -26,26 +26,48 @@
 <body>
     <!-- Шапка сайта -->
     <header id="header" data-aos="fade-down"> <!-- Анимация шапки -->
-        <div class="container">
-            <h1>Студия архитектуры бровей</h1> <!-- Название студии -->
-            <nav>
-                <ul>
-                    <li><a href="#about">Обо мне</a></li> <!-- Ссылка на раздел "Обо мне" -->
-                    <li><a href="#services">Услуги и цены</a></li> <!-- Ссылка на раздел "Услуги" -->
-                    <li><a href="#appointment">Записаться</a></li> <!-- Ссылка на раздел "Записаться" -->
-                    <li><a href="#reviews">Отзывы</a></li><!-- Ссылка на раздел "Отзывы" -->
-                    <li><a href="#social-icons">Контакты</a></li><!-- Ссылка на раздел "Кнопки соцсетей" -->
-                
-                </ul>
-            </nav>
+        <div class="container header-container">
+            <div class="header-section">
+                <h1>Студия архитектуры бровей</h1> <!-- Название студии -->
+            </div>
+            <div class="header-section">
+                <nav>
+                    <ul id="nav-links">
+                        <li><a href="#about">Обо мне</a></li> <!-- Ссылка на раздел "Обо мне" -->
+                        <li><a href="#services">Услуги и цены</a></li> <!-- Ссылка на раздел "Услуги" -->
+                        <li><a href="#appointment">Записаться</a></li> <!-- Ссылка на раздел "Записаться" -->
+                        <li><a href="#reviews">Отзывы</a></li><!-- Ссылка на раздел "Отзывы" -->
+                        <li><a href="#social-icons">Контакты</a></li><!-- Ссылка на раздел "Кнопки соцсетей" -->
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-section">
+                <div class="menu-icon" id="menu-icon"> <!-- Значок меню -->
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
         </div>
     </header>
+
+    <!-- Мобильная навигация -->
+    <div id="mobile-nav" class="mobile-nav">
+        <div class="close-icon" id="close-icon"> <!-- Крестик для закрытия -->
+            <i class="fas fa-times"></i>
+        </div>
+        <ul>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#services">Услуги и цены</a></li>
+            <li><a href="#appointment">Записаться</а></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#social-icons">Контакты</a></li>
+        </ul>
+    </div>
 
     <!-- Раздел "Обо мне" с кратким описанием студии -->
     <section id="about" data-aos="fade-up"> <!-- Анимация раздела -->
         <div class="container">
-            <h2>Обо мне</h2> <!-- Имя мастера -->
-            <h4></h4> <!-- Должность мастера -->
+            <h2>Обо мне</h2> <!-- Название раздела -->
+            <h4></h4> <!--  -->
             <p>Меня зовут Маргарита Кузнецова. Я - мастер перманентного макияжа. Множество довольных клиентов увидели себя с другой стороны. Записывайтесь на сайте или пишите в директ, там же можно посмотреть мои работы.</p>
         </div>
         <div class="about__box">
@@ -336,7 +358,26 @@
                 behavior: 'smooth'
             });
         });
+
+
+        // Скрипт для создания падающих снежинок
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.style.left = Math.random() * window.innerWidth + 'px';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+            snowflake.style.opacity = Math.random();
+            snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+            document.body.appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, 5000);
+        }
+
+        setInterval(createSnowflake, 100);
     </script>
 </body>
 
 </html>
+
