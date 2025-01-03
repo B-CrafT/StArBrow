@@ -122,7 +122,7 @@ document.getElementById('date').addEventListener('change', function () {
     const date = this.value;
     
     // Получение доступного времени из Google Таблиц
-    fetch(`https://script.google.com/macros/s/AKfycbzFrpre8IMfYdxaK5wD1cYmNNrZ0_Am9UPX2BHkNgp2oD17mXj2V1ATVMay6BXw5F0S/exec?date=${date}`)
+    fetch(`https://script.google.com/macros/s/AKfycbyTAqyw4AzN3-f7WLUnc3SqxGtvBXN3ZHtTO8UzWvL6Y0HzmxSJEvKn6cyU7hGjCMRN/exec?date=${date}`)
     .then(response => response.json())
     .then(data => {
         const timeSelect = document.getElementById('time');
