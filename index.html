@@ -21,6 +21,7 @@
 
     <!-- Подключение внешнего CSS файла для стилей -->
     <link rel="stylesheet" href="./styles.css"> <!-- Основные стили -->
+    <script type="text/javascript" src="https://beauty.dikidi.net/assets/js/widget_record/widget2.min.js"></script> <!-- Скрипт для виджета -->
 </head>
 
 <body>
@@ -56,7 +57,7 @@
         </div>
         <ul>
             <li><a href="#about">Обо мне</a></li>
-            <li><a href="#services">Услуги и цены</а></li>
+            <li><a href="#services">Услуги и цены</a></li>
             <li><a href="#appointment">Записаться</а></li>
             <li><a href="#reviews">Отзывы</a></li>
             <li><a href="#social-icons">Контакты</a></li>
@@ -262,54 +263,9 @@
     <section id="appointment" data-aos="fade-up"> <!-- Анимация раздела -->
         <div class="container">
             <h2>Записаться на услугу</h2> <!-- Заголовок раздела -->
-            <!-- Ссылка на Google Форму для записи -->
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeongesTkpnxrbH4uY63XGVothn41gy3xKIKH29RsW4Eu5vgw/viewform?usp=sharing" target="_blank" class="cta-button">Перейти к записи</a> <!-- Кнопка для записи -->
+            <a href="https://beauty.dikidi.net/#widget=177314" class="cta-button">Записаться онлайн</a> <!-- Кнопка для виджета -->
         </div>
     </section>
-
-    <!-- Модальное окно для записи -->
-    <div id="appointment-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Записаться на услугу</h2>
-            <form id="appointment-form">
-                <label for="name">Имя:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="phone">Номер телефона:</label>
-                <input type="tel" id="phone" name="phone" required>
-                
-                <label for="service">Услуга:</label>
-                <select id="service" name="service" required>
-                    <option value="Перманентный макияж бровей">Перманентный макияж бровей</option>
-                    <option value="Коррекция перманента бровей">Коррекция перманента бровей</option>
-                    <option value="Рефреш (коррекция перманента)">Рефреш (коррекция перманента)</option>
-                    <option value="Снятие наращенных ресниц">Снятие наращенных ресниц</option>
-                    <option value="Ламинирование + окрашивание">Ламинирование + окрашивание</option>
-                    <option value="Ламинирование + окрашивание + ботокс">Ламинирование + окрашивание + ботокс</option>
-                    <option value="Ламинирование верхних и нижних ресниц">Ламинирование верхних и нижних ресниц</option>
-                    <option value="Оформление бровей">Оформление бровей</option>
-                    <option value="Процедура 'Счастье для бровей'">Процедура "Счастье для бровей"</option>
-                    <option value="Оформление и окрашивание">Оформление и окрашивание</option>
-                    <option value="Долговременная укладка и оформление">Долговременная укладка и оформление</option>
-                    <option value="Долговременная укладка + оформление + окрашивание">Долговременная укладка + оформление + окрашивание</option>
-                    <option value="Комплекс №1">Комплекс №1</option>
-                    <option value="Комплекс №2">Комплекс №2</option>
-                    <option value="Комплекс №3">Комплекс №3</option>
-                </select>
-                
-                <label for="date">Дата:</label>
-                <input type="date" id="date" name="date" required>
-                
-                <label for="time">Время:</label>
-                <select id="time" name="time" required>
-                    <!-- Варианты времени будут добавлены динамически -->
-                </select>
-                
-                <button type="submit">Записаться</button>
-            </form>
-        </div>
-    </div>
 
     <!-- Раздел отзывов -->
     <section id="reviews" data-aos="fade-up"> <!-- Анимация раздела -->
