@@ -62,3 +62,80 @@ function createSnowflake() {
 }
 
 setInterval(createSnowflake, 350);
+
+// Открытие модального окна при клике на кнопку записи
+document.querySelector('.cta-button').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('appointment-modal').style.display = 'block';
+});
+
+// Закрытие модального окна при клике на значок закрытия
+document.querySelector('.close-modal').addEventListener('click', function () {
+    document.getElementById('appointment-modal').style.display = 'none';
+});
+
+// Закрытие модального окна при клике вне его
+window.addEventListener('click', function (e) {
+    if (e.target == document.getElementById('appointment-modal')) {
+        document.getElementById('appointment-modal').style.display = 'none';
+    }
+});
+
+// Обработка формы записи
+document.getElementById('appointment-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const service = document.getElementById('service').value;
+    const date = document.getElementById('date').value;
+    const time = document.getElementById('time').value;
+    
+    // Отправка данных в Google Таблицы
+    fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', {
+        method: 'POST',
+        body: JSON.stringify({
+            name: name,
+            phone: phone,
+            service: service,
+            date: date,
+            time: time
+        }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Запись добавлена:', data);
+        // Закрытие модального окна и очистка формы
+        document.getElementById('appointment-modal').style.display = 'none';
+        this.reset();
+    })
+    .catch(error => {
+        console.error('Ошибка:', error);
+    });
+});
+
+// Обновление списка времени при выборе даты
+document.getElementById('date').addEventListener('change', function () {
+    const date = this.value;
+    
+    // Получение доступного времени из Google Таблиц
+    fetch(`https://script.google.com/macros/s/AKfycbzFrpre8IMfYdxaK5wD1cYmNNrZ0_Am9UPX2BHkNgp2oD17mXj2V1ATVMay6BXw5F0S/exec?date=${date}`)
+    .then(response => response.json())
+    .then(data => {
+        const timeSelect = document.getElementById('time');
+        timeSelect.innerHTML = ''; // Очистка списка времени
+        
+        data.times.forEach(time => {
+            const option = document.createElement('option');
+            option.value = time;
+            option.textContent = time;
+            timeSelect.appendChild(option);
+        });
+    })
+    .catch(error => {
+        console.error('Ошибка:', error);
+    });
+});
