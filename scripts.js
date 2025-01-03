@@ -61,4 +61,4 @@ function createSnowflake() {
     }, 10000); // Увеличиваем время удаления снежинки
 }
 
-setInterval(createSnowflake, 100);
+setInterval(createSnowflake, 350);
